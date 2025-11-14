@@ -11,12 +11,12 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ categories, activeCateg
   const allCategories: (ShortcutCategory | 'All')[] = ['All', ...categories];
 
   return (
-    <div className="flex flex-wrap justify-center gap-2">
+    <div className="flex w-full flex-nowrap gap-2 overflow-x-auto px-4 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0">
       {allCategories.map((category) => (
         <button
           key={category}
           onClick={() => onSelectCategory(category)}
-          className={`px-3 py-1.5 text-sm font-medium rounded-full transition-colors duration-200 ${
+          className={`whitespace-nowrap rounded-full px-3 py-1.5 text-sm font-medium transition-colors duration-200 ${
             activeCategory === category
               ? 'bg-[var(--color-accent)] text-[var(--color-accent-text)]'
               : 'bg-[var(--color-bg-muted)] text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-muted-hover)]'
