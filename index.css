@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .font-mono {
+    font-family: 'Roboto Mono', monospace;
+  }
+
+  :root,
+  .theme-dark {
+    --color-bg-primary: #111827;
+    --color-bg-secondary: #1f2937;
+    --color-bg-muted: #374151;
+    --color-bg-muted-hover: #4b5563;
+    --color-bg-inset: #000000;
+    --color-text-primary: #e5e7eb;
+    --color-text-secondary: #9ca3af;
+    --color-text-tertiary: #6b7280;
+    --color-border-primary: #374151;
+    --color-border-secondary: #4b5563;
+    --color-accent: #a855f7;
+    --color-accent-text: #ffffff;
+    --color-accent-subtle-text: #d8b4fe;
+    --color-accent-subtle-bg: rgba(168, 85, 247, 0.15);
+  }
+
+  .theme-light {
+    --color-bg-primary: #f3f4f6;
+    --color-bg-secondary: #ffffff;
+    --color-bg-muted: #e5e7eb;
+    --color-bg-muted-hover: #d1d5db;
+    --color-bg-inset: #e5e7eb;
+    --color-text-primary: #1f2937;
+    --color-text-secondary: #6b7280;
+    --color-text-tertiary: #9ca3af;
+    --color-border-primary: #d1d5db;
+    --color-border-secondary: #9ca3af;
+    --color-accent: #4f46e5;
+    --color-accent-text: #ffffff;
+    --color-accent-subtle-text: #6366f1;
+    --color-accent-subtle-bg: #e0e7ff;
+  }
+
+  .theme-synthwave {
+    --color-bg-primary: #20133e;
+    --color-bg-secondary: #2d1b54;
+    --color-bg-muted: #442b79;
+    --color-bg-muted-hover: #58399a;
+    --color-bg-inset: #1a0f32;
+    --color-text-primary: #e0d6ff;
+    --color-text-secondary: #a992d4;
+    --color-text-tertiary: #8870b3;
+    --color-border-primary: #442b79;
+    --color-border-secondary: #58399a;
+    --color-accent: #ff00ff;
+    --color-accent-text: #ffffff;
+    --color-accent-subtle-text: #00ffff;
+    --color-accent-subtle-bg: rgba(0, 255, 255, 0.1);
+  }
+}
+
+@layer utilities {
+  .heart-pump {
+    display: inline-block;
+    animation: human-heartbeat 1.25s ease-in-out infinite;
+    transform-origin: center;
+  }
+}
+
+@keyframes human-heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.1);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
