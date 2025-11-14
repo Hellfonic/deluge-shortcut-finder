@@ -6,6 +6,7 @@ import Header from './components/Header';
 import SearchBar from './components/SearchBar';
 import CategoryFilter from './components/CategoryFilter';
 import ShortcutTable from './components/ShortcutTable';
+import ShortcutCard from './components/ShortcutCard';
 import { Footer } from './components/Footer';
 import ThemeSwitcher from './components/ThemeSwitcher';
 
@@ -132,12 +133,24 @@ const App: React.FC = () => {
             </div>
         </div>
         
-        <div className="text-center mb-4 text-sm text-[var(--color-text-secondary)]">
+        <div className="text-center mb-4 text-sm text-[var(--color-text-secondary)] hidden md:block">
           <p>Click a column header to sort. <strong>Shift-click</strong> to sort by multiple columns.</p>
+        </div>
+        <div className="text-center mb-4 text-sm text-[var(--color-text-secondary)] md:hidden">
+          <p>Shortcuts are shown as cards on small screens. Sorting controls are available on larger displays.</p>
         </div>
 
         {sortedShortcuts.length > 0 ? (
-          <ShortcutTable shortcuts={sortedShortcuts} sortConfig={sortConfig} onSort={handleSort} />
+          <>
+            <div className="hidden md:block">
+              <ShortcutTable shortcuts={sortedShortcuts} sortConfig={sortConfig} onSort={handleSort} />
+            </div>
+            <div className="grid gap-4 md:hidden max-w-3xl mx-auto">
+              {sortedShortcuts.map((shortcut) => (
+                <ShortcutCard key={shortcut.id} shortcut={shortcut} />
+              ))}
+            </div>
+          </>
         ) : (
           <div className="text-center py-16">
             <p className="text-[var(--color-text-secondary)] text-lg">No shortcuts found. Try a different search or filter.</p>
