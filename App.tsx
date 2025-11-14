@@ -115,7 +115,7 @@ const App: React.FC = () => {
         <ThemeSwitcher currentTheme={theme} setTheme={setTheme} />
       </div>
 
-      <main className="flex-grow container mx-auto px-4 py-8">
+      <main className="flex-grow container mx-auto px-4 py-10">
         <Header />
 
         <div className="sticky top-0 z-10 bg-[var(--color-bg-primary)]/80 backdrop-blur-md py-6 mb-8">
