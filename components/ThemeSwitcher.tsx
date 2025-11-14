@@ -24,7 +24,7 @@ const themes: { name: Theme; icon: React.ReactNode }[] = [
   {
     name: 'synthwave',
     icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 12.5a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9zM12 12.5v8.5"/><path d="M12 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 6c3 0 3 6 6 6s3-6 6-6 3 6 6 6"/><path d="M3 12c3 0 3 6 6 6s3-6 6-6 3 6 6 6"/></svg>
     ),
   },
 ];
