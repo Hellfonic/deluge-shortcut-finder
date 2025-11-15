@@ -71,6 +71,15 @@
     animation: human-heartbeat 1.25s ease-in-out infinite;
     transform-origin: center;
   }
+
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @keyframes human-heartbeat {
