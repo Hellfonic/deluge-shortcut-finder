@@ -71,6 +71,28 @@
     animation: human-heartbeat 1.25s ease-in-out infinite;
     transform-origin: center;
   }
+
+  .scrollbar-thin {
+    overflow-x: auto;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 1px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: var(--color-border-primary);
+    border-radius: 4px;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border-primary) transparent;
+  }
 }
 
 @keyframes human-heartbeat {

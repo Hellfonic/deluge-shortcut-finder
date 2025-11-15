@@ -11,7 +11,7 @@ const CategoryFilter: React.FC<CategoryFilterProps> = ({ categories, activeCateg
   const allCategories: (ShortcutCategory | 'All')[] = ['All', ...categories];
 
   return (
-    <div className="flex w-full flex-nowrap gap-2 overflow-x-auto px-4 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0">
+    <div className="flex w-full flex-nowrap gap-2 overflow-x-auto scrollbar-thin px-4 pb-2 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0">
       {allCategories.map((category) => (
         <button
           key={category}
